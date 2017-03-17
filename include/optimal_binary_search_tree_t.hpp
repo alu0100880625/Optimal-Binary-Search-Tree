@@ -8,7 +8,7 @@
 #include <cstring>
 #include <limits>
 
-//#define _DEBUG_
+#define _DEBUG_
 #define COUT_PRECISION 2
 
 typedef float obst_frequency_t;
@@ -25,7 +25,8 @@ class optimal_binary_search_tree_t
     optimal_binary_search_tree_t(std::string file_name);
     ~optimal_binary_search_tree_t(void);
 
-    void solve(void);
+    void solve_dynamic_programming(void);
+    void solve_bottom_up(void);
     ABB_t<type_t> reconstruct(void) const;
     private:
       obst_frequency_t sum(obst_inx_t lower_limit, obst_inx_t upper_limit) const;
@@ -62,8 +63,13 @@ optimal_binary_search_tree_t<type_t>::~optimal_binary_search_tree_t(void)
 
 
 template <class type_t>
-void optimal_binary_search_tree_t<type_t>::solve(void)
+void optimal_binary_search_tree_t<type_t>::solve_dynamic_programming(void)
 {
+  matrix_t<obst_frequency_t> sum_matrix(keys_.size(), keys_.size());
+  for(obst_inx_t i = 0; i < keys_.size(); i++)
+    for(obst_inx_t j = 0; j < keys_.size(); j++)
+      sum_matrix(i, j) = std::numeric_limits<obst_frequency_t>::infinity();
+
   for(obst_inx_t i = 0; i < keys_.size(); i++)
     costs_(i, i) = frequency_[i];
 
@@ -84,9 +90,13 @@ void optimal_binary_search_tree_t<type_t>::solve(void)
       for(obst_inx_t r = i; r <= j; r++)
       {
         obst_frequency_t c = ((r > i) ? costs_(i, r - 1) : 0) +
-                ((r < j) ? costs_(r + 1, j) : 0) +
-                sum(i, j);
-
+                ((r < j) ? costs_(r + 1, j) : 0);
+        if(sum_matrix(i, j) == std::numeric_limits<obst_frequency_t>::infinity())
+        {
+          sum_matrix(i, j) = sum(i, j);
+          numero_iteraciones += j - i;
+        }
+        c += sum_matrix(i, j);
         #ifdef _DEBUG_
           std::cout
           << "L: " << L << " hasta: " << keys_.size() << std::endl
@@ -107,7 +117,6 @@ void optimal_binary_search_tree_t<type_t>::solve(void)
             std::cout << "coste(" << i << ", " << j << ") ahora vale: " << c << std::endl;
           #endif
         }
-
         #ifdef _DEBUG_
           std::cout << costs_ << std::endl;
           numero_iteraciones++;
@@ -118,6 +127,63 @@ void optimal_binary_search_tree_t<type_t>::solve(void)
       std::cout << "Número de iteraciones: " << numero_iteraciones << std::endl;
     #endif
   }
+}
+
+
+template <class type_t>
+void optimal_binary_search_tree_t<type_t>::solve_bottom_up(void)
+{
+  #ifdef _DEBUG_
+    obst_inx_t numero_iteraciones = 0;
+    std::cout.precision(COUT_PRECISION);
+    std::cout << std::fixed;
+    std::cout << costs_ << std::endl;
+  #endif
+
+  for(obst_inx_t size = 1; size <= keys_.size(); size++)
+  {
+    const obst_inx_t limit = keys_.size() - size;
+    for(obst_inx_t i = 0; i <= limit; i++)
+    {
+      obst_inx_t j = i + size - 1;
+      costs_(i, j) = std::numeric_limits<obst_frequency_t>::infinity();
+      for(obst_inx_t r = i; r <= j; r++)
+      {
+        obst_frequency_t temporal = sum(i, j);
+        if(r > i)
+          temporal += costs_(i, r - 1);
+        if(r < j)
+          temporal += costs_(r + 1, j);
+
+        #ifdef _DEBUG_
+          std::cout
+          << "size: " << size << " hasta: " << keys_.size() << std::endl
+          << "i: " << i << " hasta: " << limit << std::endl
+          << "j: " << j << std::endl
+          << "r: " << r << " hasta: " << j << std::endl
+          << "suma: " << ((r > i) ? std::string("coste(" + std::to_string(i) + ", " + std::to_string(r - 1) + ")") : "0")
+          << " + " << ((r < j) ? std::string("coste(" + std::to_string(r + 1) + ", " + std::to_string(j) + ")") : "0")
+          << " + " << "suma(" << i << ", " << j << ") (" << sum(i, j) << ") = " << temporal << std::endl
+          << "coste(" << i << ", " << j << ") = " << costs_(i, j) << std::endl;
+        #endif
+
+        if(temporal < costs_(i, j))
+        {
+          costs_(i,j) = temporal;
+
+          #ifdef _DEBUG_
+            std::cout << "coste(" << i << ", " << j << ") ahora vale: " << temporal << std::endl;
+          #endif
+        }
+
+        #ifdef _DEBUG_
+          std::cout << costs_ << std::endl;
+          numero_iteraciones += j - i + 1;
+        #endif
+      }
+    }
+  }
+  std::cout<<numero_iteraciones<<std::endl;
 }
 
 
@@ -146,7 +212,6 @@ void optimal_binary_search_tree_t<type_t>::recursive_reconstruct(obst_inx_t row,
   }
 
 }
-
 
 template <class type_t>
 obst_frequency_t optimal_binary_search_tree_t<type_t>::sum(obst_inx_t lower_limit, obst_inx_t upper_limit) const
