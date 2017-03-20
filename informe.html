@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>informe</title>
+      <style>.markdown-preview-enhanced .markdown-spinner { margin: 48px auto; padding-top: 70px; text-align: center; font-size: 16px; background-image: url("images/octocat-spinner-128.gif"); background-size: 64px; background-position: center top; background-repeat: no-repeat; }
+.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(51, 51, 51); overflow: auto; background-color: rgb(249, 250, 250); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(92, 92, 92); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(51, 51, 51); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(92, 92, 92); border-color: rgb(205, 211, 213); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(205, 211, 213); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(205, 211, 213); }
+.markdown-preview:not([data-use-github-style]) pre, .markdown-preview:not([data-use-github-style]) code { color: rgb(0, 0, 0); background-color: rgb(233, 235, 236); }
+.markdown-preview:not([data-use-github-style]) pre, .markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(238, 240, 241); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(0, 0, 0); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(205, 211, 213) rgb(205, 211, 213) rgb(189, 196, 199); background-color: rgb(233, 235, 236); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] pre, .markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview del { text-decoration: none; position: relative; }
+.markdown-preview del::after { border-bottom: 1px solid black; content: ""; left: 0px; position: absolute; right: 0px; top: 50%; }
+.markdown-preview .flash { animation: flash 1s ease-out 1; outline: rgba(255, 0, 0, 0) solid 1px; }
+.markdown-preview .flash:not(li) { display: block; }
+.markdown-preview code { text-shadow: none; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+.scrollbars-visible-always /deep/ ::-webkit-scrollbar-thumb {
+  background: #bbc7cc !important;
+}
+.scrollbars-visible-always /deep/ ::-webkit-scrollbar-track,
+.scrollbars-visible-always /deep/ ::-webkit-scrollbar-thumb {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0;
+}
+pre.editor-colors,pre.editor-colors,
+pre.editor-colors.editor {
+  background-color: #ffffff;
+  color: #335151;
+}
+pre.editor-colors .wrap-guide,pre.editor-colors .wrap-guide,
+pre.editor-colors.editor .wrap-guide {
+  background-color: rgba(187, 199, 204, 0.4);
+}
+pre.editor-colors .gutter,pre.editor-colors .gutter,
+pre.editor-colors.editor .gutter {
+  color: #98aab2;
+}
+pre.editor-colors .invisible-character,pre.editor-colors .invisible-character,
+pre.editor-colors.editor .invisible-character,
+pre.editor-colors .indent-guide,pre.editor-colors .indent-guide,
+pre.editor-colors.editor .indent-guide,
+pre.editor-colors .invisible,pre.editor-colors .invisible,
+pre.editor-colors.editor .invisible {
+  color: #e4e9eb;
+}
+pre.editor-colors .gutter.git-diff-icon .line-number.git-line-added:before,pre.editor-colors .gutter.git-diff-icon .line-number.git-line-added:before,
+pre.editor-colors.editor .gutter.git-diff-icon .line-number.git-line-added:before {
+  color: #63a35c;
+}
+pre.editor-colors .gutter.git-diff-icon .line-number.git-line-modified:before,pre.editor-colors .gutter.git-diff-icon .line-number.git-line-modified:before,
+pre.editor-colors.editor .gutter.git-diff-icon .line-number.git-line-modified:before {
+  color: #df5000;
+}
+pre.editor-colors .gutter .line-number.folded,pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors.editor .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,pre.editor-colors .gutter .line-number:after,
+pre.editor-colors.editor .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,pre.editor-colors .fold-marker:after,
+pre.editor-colors.editor .fold-marker:after {
+  color: rgba(226, 67, 0, 0.4);
+}
+pre.editor-colors .line-number.ruby-block-highlight,pre.editor-colors .line-number.ruby-block-highlight,
+pre.editor-colors.editor .line-number.ruby-block-highlight,
+pre.editor-colors .line-number.cursor-line-no-selection,pre.editor-colors .line-number.cursor-line-no-selection,
+pre.editor-colors.editor .line-number.cursor-line-no-selection,
+pre.editor-colors .selection .region,pre.editor-colors .selection .region,
+pre.editor-colors.editor .selection .region {
+  background-color: #fbf7cd;
+}
+pre.editor-colors .highlights .ruby-block-highlight .region,pre.editor-colors .highlights .ruby-block-highlight .region,
+pre.editor-colors.editor .highlights .ruby-block-highlight .region {
+  background-color: transparent !important;
+}
+pre.editor-colors .cursor,pre.editor-colors .cursor,
+pre.editor-colors.editor .cursor {
+  border-width: 1px;
+  border-color: #0086b3;
+}
+pre.editor-colors .find-result .region,pre.editor-colors .find-result .region,
+pre.editor-colors.editor .find-result .region,
+pre.editor-colors .highlights .ruby-block-highlight .region,pre.editor-colors .highlights .ruby-block-highlight .region,
+pre.editor-colors.editor .highlights .ruby-block-highlight .region {
+  border: none;
+  border-bottom: 1px solid #0086b3;
+  border-radius: 0;
+}
+pre.editor-colors .line.cursor-line,pre.editor-colors .line.cursor-line,
+pre.editor-colors.editor .line.cursor-line {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+pre.editor-colors .bracket-matcher .region,pre.editor-colors .bracket-matcher .region,
+pre.editor-colors.editor .bracket-matcher .region {
+  border-bottom: 1px solid #0086b3;
+}
+.syntax--comment {
+  color: #bbc7cc;
+}
+.syntax--comment.syntax--header {
+  color: #c7d1d5;
+}
+.syntax--comment .xxx,
+.syntax--comment .yard,
+.syntax--comment .syntax--todo,
+.syntax--comment .syntax--fixme,
+.syntax--comment .syntax--changed,
+.syntax--comment .idea,
+.syntax--comment .syntax--hack,
+.syntax--comment .syntax--note {
+  color: #b39ba8;
+}
+.syntax--string .syntax--punctuation.syntax--section.syntax--embedded,
+.syntax--string .syntax--punctuation.syntax--section.syntax--embedded .syntax--source,
+.syntax--string {
+  color: #183691;
+}
+.syntax--string .syntax--meta.syntax--embedded.line,
+.syntax--string .syntax--source {
+  color: #335151;
+}
+.syntax--constant.syntax--numeric,
+.syntax--constant.syntax--other.syntax--variable,
+.syntax--constant.syntax--other.syntax--symbol,
+.syntax--constant.syntax--language {
+  color: #0086b3;
+}
+.syntax--constant.syntax--character {
+  color: #63a35c;
+}
+.syntax--constant.syntax--other {
+  color: #335151;
+}
+.syntax--variable,
+.syntax--variable .syntax--variable.syntax--parameter,
+.syntax--variable .syntax--variable.syntax--punctuation.syntax--separator,
+.syntax--variable .syntax--variable.syntax--other.syntax--object > .syntax--punctuation,
+.syntax--variable .syntax--variable.syntax--other.syntax--block {
+  color: #335151;
+}
+.syntax--variable.syntax--self {
+  color: #ed6a43;
+}
+.syntax--keyword.syntax--other,
+.syntax--keyword.syntax--control,
+.syntax--keyword,
+.syntax--keyword.syntax--special-method,
+.syntax--keyword.syntax--operator,
+.syntax--keyword.syntax--unit {
+  color: #a71d5d;
+}
+.syntax--entity.syntax--name.syntax--function,
+.syntax--entity.syntax--other.syntax--attribute-name,
+.syntax--entity.syntax--other.syntax--inherited-class.syntax--punctuation,
+.syntax--entity.syntax--other.syntax--inherited-class,
+.syntax--entity.syntax--name.syntax--class {
+  color: #795da3;
+}
+.syntax--support.syntax--class,
+.syntax--support.syntax--constant,
+.syntax--support.syntax--type {
+  color: #0086b3;
+}
+.syntax--markup.syntax--deleted,
+.syntax--markup .syntax--invalid {
+  background-color: #ffdddd;
+  color: #e07373;
+}
+.syntax--markup.syntax--deleted.syntax--deprecated,
+.syntax--markup .syntax--invalid.syntax--deprecated {
+  color: #cdb944;
+  background-color: #fbf7cd;
+}
+.syntax--markup.syntax--inserted {
+  color: #80c875;
+  background-color: #ddffe0;
+}
+.syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--double.syntax--json,
+.syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--double.syntax--json .syntax--punctuation.syntax--string {
+  color: #63a35c;
+}
+.syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--double.syntax--json,
+.syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--double.syntax--json > .syntax--punctuation {
+  color: #183691;
+}
+.syntax--meta.syntax--diff,
+.syntax--meta.syntax--diff.syntax--header {
+  color: #969896;
+}
+.syntax--css.syntax--meta.syntax--selector,
+.syntax--less.syntax--meta.syntax--selector,
+.syntax--scss.syntax--meta.syntax--selector,
+.syntax--css.syntax--support.syntax--function,
+.syntax--less.syntax--support.syntax--function,
+.syntax--scss.syntax--support.syntax--function {
+  size: 100px;
+  color: #795da3;
+}
+.syntax--coffee.syntax--assignment.syntax--variable,
+.syntax--yaml.syntax--entity.syntax--name,
+.syntax--html.syntax--entity.syntax--tag,
+.syntax--slim.syntax--entity.syntax--name.syntax--tag,
+.syntax--haml.syntax--entity.syntax--name.syntax--tag {
+  color: #63a35c;
+}
+.syntax--js.syntax--type.syntax--class,
+.syntax--js.syntax--storage.syntax--modifier {
+  color: #a71d5d;
+}
+.syntax--js.syntax--entity.syntax--name {
+  color: #795da3;
+}
+.syntax--js.syntax--variable.syntax--language {
+  color: #ed6a43;
+}
+.syntax--js.syntax--support.syntax--function,
+.syntax--js.syntax--constant.syntax--other {
+  color: #0086b3;
+}
+.syntax--ruby .syntax--entity.syntax--module,
+.syntax--ruby .syntax--entity.syntax--class {
+  color: #795da3;
+}
+.syntax--gfm .syntax--markup.syntax--heading,
+.syntax--markdown .syntax--markup.syntax--heading,
+.syntax--md .syntax--markup.syntax--heading {
+  color: #63a35c;
+}
+.syntax--gfm .syntax--markup.syntax--hyperlink,
+.syntax--markdown .syntax--markup.syntax--hyperlink,
+.syntax--md .syntax--markup.syntax--hyperlink {
+  color: #a71d5d;
+}
+.syntax--gfm .syntax--markup.syntax--raw,
+.syntax--markdown .syntax--markup.syntax--raw,
+.syntax--md .syntax--markup.syntax--raw {
+  color: #0086b3;
+}
+.syntax--gfm .syntax--list,
+.syntax--markdown .syntax--list,
+.syntax--md .syntax--list,
+.syntax--gfm .syntax--link,
+.syntax--markdown .syntax--link,
+.syntax--md .syntax--link {
+  color: #a71d5d;
+}
+.syntax--gfm .syntax--list .syntax--entity,
+.syntax--markdown .syntax--list .syntax--entity,
+.syntax--md .syntax--list .syntax--entity,
+.syntax--gfm .syntax--link .syntax--entity,
+.syntax--markdown .syntax--link .syntax--entity,
+.syntax--md .syntax--link .syntax--entity {
+  color: #0086b3;
+}
+.syntax--gfm .syntax--issue,
+.syntax--markdown .syntax--issue,
+.syntax--md .syntax--issue {
+  color: #a71d5d;
+}
+</style>
+  </head>
+  <body class='markdown-preview'><h1>ÁRBOLES DE BÚSQUEDA BINARIA ÓPTIMOS</h1>
+<p>Kevin Diaz Marrero<br>
+Aythami Torrado Cabrera<br>
+Daniel Fernandez Perez</p>
+<h2>INTRODUCCIÓN</h2>
+<h3>¿Qué es un árbol binario de búsqueda?</h3>
+<p>Un árbol binario no es más que una estructura de datos cuyos nodos pueden tener un hijo a la izquierda o a la derecha ( no más de 2). Por lo tanto un árbol binario de búsqueda no es más que un tipo de árbol binario cuya estructura de árbol se representa en informática.</p>
+<p><img src="/home/daniel/Documentos/DAA/arbol.png?v=1490004134110" alt="Sin titulo"></p>
+<p>Estos árboles pueden realizar operaciones de:</p>
+<ul>
+<li>Búsqueda : La búsqueda en un árbol binario de búsqueda consiste en acceder a la raíz del árbol, si el elemento a localizar coincide con éste la búsqueda ha concluido con éxito, si el elemento es menor se busca en el subárbol izquierdo y si es mayor en el derecho. Si se alcanza un nodo hoja y el elemento no ha sido encontrado es que no existe en el árbol. Estas búsquedas son bastantes eficientes teniendo un máximo de comparaciones en el rango de  <strong>[log2(N+1)] y N</strong></li>
+<li>Insertado: La inserción es similar a la búsqueda y se puede dar una solución tanto iterativa como recursiva. Si tenemos inicialmente como parámetro un árbol vacío se crea un nuevo nodo como único contenido el elemento a insertar. Si no lo está, se comprueba si el elemento dado es menor que la raíz del árbol inicial con lo que se inserta en el subárbol izquierdo y si es mayor se inserta en el subárbol derecho.</li>
+<li>Borrado: esta operación es más compleja y hay que tener en cuenta a borrar un nodo hija o padre el impacto que tendrá en la estructura del mismo.</li>
+</ul>
+<h3>Árboles de búsqueda binario óptimos</h3>
+<p>Si no vamos a modificar un árbol de búsqueda, y sabemos exactamente con qué frecuencia cada artículo  será accesible, podemos construir un árbol binario de búsqueda óptimo, que es un árbol de búsqueda donde el coste medio de buscar un artículo (el esperado coste de búsqueda) se reduce al <strong>mínimo</strong>.</p>
+<p>Incluso si sólo tenemos estimaciones de los costos de búsqueda, este sistema puede acelerar considerablemente las búsquedas en promedio.</p>
+<p>Nosotros vamos a abordar la solución al mismo tanto mediante programación dinámica como con bottom_up.</p>
+<h2>ALGORITMOS</h2>
+<h3>Programación dinámica</h3>
+<p>A la hora de abordar el problema mediante programación dinámica, hay que tener en cuenta el principio de optimibilidad, y este nos dice que :</p>
+<blockquote>
+<p>Todos los subárboles de un árbol óptimo son óptimos con respecto a las claves que contienen.”</p>
+</blockquote>
+<p>De esta forma, abordaremos nuestro problema de la siguiente forma:</p>
+<ul>
+<li>Consideremos un subárbol óptimo que contenga las claves wi+1, wi+2, …, wj.</li>
+<li>Denotemos por Cij el número medio de comparaciones efectuadas en un subárbol óptimo que contiene las claves wi+1, wi+2, …, wj durante la búsqueda de una clave en el árbol principal (y convenimos en que Cii=0).</li>
+<li>Supongamos ahora que wk ocupa la raíz de ese subárbol.</li>
+<li>Sea el número medio de comparaciones efectuadas en ese subárbol durante la búsqueda de una clave en el árbol principal.</li>
+</ul>
+<h5>Pseudocódigo</h5>
+<p>El pseudocódigo de nuestro árbol mediante programación dinámica sería:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>FUNCTION&nbsp;OPTIMAL_BINARY_SEARCH_TREE(keys,&nbsp;freq,&nbsp;n)&nbsp;&nbsp;</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>begin&nbsp;&nbsp;&nbsp;</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>for&nbsp;i&nbsp;=&nbsp;0&nbsp;to&nbsp;n-1&nbsp;do&nbsp;&nbsp;&nbsp;</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>aux_matrix(i,i)&nbsp;&lt;-&nbsp;freq(i)&nbsp;&nbsp;</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>for&nbsp;L&nbsp;=&nbsp;2&nbsp;to&nbsp;n&nbsp;do</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>for&nbsp;i&nbsp;=&nbsp;0&nbsp;to&nbsp;n&nbsp;do</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>j&nbsp;&lt;-&nbsp;i&nbsp;+&nbsp;L&nbsp;-&nbsp;1</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aux_matrix(i,j)&nbsp;&lt;-&nbsp;INFINITY</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;r&nbsp;=&nbsp;i&nbsp;to&nbsp;j&nbsp;do</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>obst_freq&nbsp;&lt;-&nbsp;0</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;r&nbsp;&gt;&nbsp;i&nbsp;then</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>obst_freq&nbsp;+&nbsp;aux_matrix(i,&nbsp;r-1)</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>elseif&nbsp;r&nbsp;&lt;&nbsp;j&nbsp;then</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>obst_freq&nbsp;+&nbsp;aux_matrix(r+1,j)</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>else</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>obst_freq&nbsp;+&nbsp;0</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;</span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>obst_freq&nbsp;+&nbsp;SUM(freq,&nbsp;i,&nbsp;j)</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;</span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>if&nbsp;obst_freq&nbsp;&lt;&nbsp;aux_matrix(i,j)&nbsp;then</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>aux_matrix(i,j)&nbsp;&lt;-&nbsp;obst_freq</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;</span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>return&nbsp;aux_matrix(0,&nbsp;n-1)</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>end</span></span></span>
+</div></pre>
+<p>Un pseudocódigo para nuestra función SUM sería:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>FUNCTION&nbsp;SUM(freq,&nbsp;i,&nbsp;j)</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>begin</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>s&nbsp;&lt;-&nbsp;0</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;for&nbsp;k&nbsp;=&nbsp;i&nbsp;to&nbsp;j&nbsp;do</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>s&nbsp;+&nbsp;freq(k)</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>return&nbsp;s</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>end</span></span></span>
+</div></pre>
+<h5>Complejidad</h5>
+<p>El tiempo de complejidad es <strong>O(n⁴)</strong>. Pero este tiempo se puede reducir a <strong>O(n³)</strong> pre-calculando la suma de las frecuencias en lugar de llamar a SUM una y otra vez.</p>
+<h5>Comprobaciones</h5>
+<table>
+<thead>
+<tr>
+<th>Nodos</th>
+<th>Iteraciones</th>
+<th>Tiempo (~s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>0.11</td>
+</tr>
+<tr>
+<td>3</td>
+<td>11</td>
+<td>0.29</td>
+</tr>
+<tr>
+<td>4</td>
+<td>26</td>
+<td>0.49</td>
+</tr>
+<tr>
+<td>7</td>
+<td>133</td>
+<td>2.30</td>
+</tr>
+<tr>
+<td>10</td>
+<td>375</td>
+<td>22.68</td>
+</tr>
+<tr>
+<td>15</td>
+<td>1225</td>
+<td>139.74</td>
+</tr>
+<tr>
+<td>50</td>
+<td>42875</td>
+<td>37589.90</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/home/daniel/Documentos/DAA/1.png?v=1490004134111" alt="Sin titulo"></p>
+<blockquote>
+<p>Hay que tener en cuenta que el tiempo depende del hardware del ordenador de pruebas y también de las <strong>frecuencias</strong> que le pases en relación a cada nodo / key.</p>
+</blockquote>
+<h3>Bottom up</h3>
+<h4>Introducción</h4>
+<p>Bottom-up es una técnica que se base en ir resolviendo los subproblemas desde los de menor tamaño a los de más. De tal modo que al final nos de un resultado global de todo nuestro problema a resolver.</p>
+<h4>Pseudocódigo</h4>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>FUNCTION&nbsp;BOTTOM_UP(keys,&nbsp;freq,&nbsp;n)</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>begin</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>for&nbsp;i&nbsp;=&nbsp;1&nbsp;to&nbsp;SIZE_KEYS&nbsp;do</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>limit&nbsp;&lt;-&nbsp;i&nbsp;+&nbsp;SIZE_KEYS&nbsp;-&nbsp;n;</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;i&nbsp;=&nbsp;0&nbsp;to&nbsp;limit&nbsp;do</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>j&nbsp;&lt;-&nbsp;i&nbsp;+&nbsp;n&nbsp;-&nbsp;1</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aux_matrix(i,j)&nbsp;&lt;-&nbsp;INFINITY</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;r&nbsp;=&nbsp;i&nbsp;to&nbsp;j</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>temp&nbsp;&lt;&nbsp;-&nbsp;SUM&nbsp;(i,&nbsp;j)</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;r&nbsp;&gt;&nbsp;i&nbsp;then</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>temporal&nbsp;&nbsp;&lt;-&nbsp;temporal&nbsp;+&nbsp;aux_matrix(i,&nbsp;r-1)</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>if&nbsp;r&nbsp;&lt;&nbsp;j</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>temporal&nbsp;&nbsp;&lt;-&nbsp;temporal&nbsp;+&nbsp;aux_matrix(r+1,&nbsp;j)</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>if&nbsp;temporal&nbsp;&nbsp;&lt;&nbsp;aux_matrix(i,j)&nbsp;then</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>aux_matrix(i,j)&nbsp;&lt;-&nbsp;temporal</span></span></span>
+</div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>end</span></span></span>
+</div></pre>
+<h5>Complejidad</h5>
+<h5>Comprobaciones</h5>
+<table>
+<thead>
+<tr>
+<th>Nodos</th>
+<th>Iteraciones</th>
+<th>Tiempo (~s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>6</td>
+<td>0.17</td>
+</tr>
+<tr>
+<td>3</td>
+<td>20</td>
+<td>0.33</td>
+</tr>
+<tr>
+<td>4</td>
+<td>50</td>
+<td>0.61</td>
+</tr>
+<tr>
+<td>7</td>
+<td>336</td>
+<td>3.85</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1210</td>
+<td>19.58</td>
+</tr>
+<tr>
+<td>15</td>
+<td>5440</td>
+<td>141.42</td>
+</tr>
+<tr>
+<td>50</td>
+<td>563550</td>
+<td>39434.32</td>
+</tr>
+</tbody>
+</table>
+<h2>CONCLUCIONES</h2>
+<p>Como pudimos observar en la resolución mediante programación dinámica, el algoritmo es bastante efectivo, y aunque para cierta cantidad de nodos con sus respectivos frecuencias, el número de iteraciones sea mayor, sigue aportando una buena solución al problema planteado.
+En comparación de usar la técnica bottom-up, el algoritmo de programación dinámica resuelve nuestro problema en la mitad de iteraciones e incluso la diferencia de tiempo de ejecución entre los dos métodos no son notorios en el hardware usado.</p>
+<h2>BIBLIOGRAFÍA</h2>
+<ul>
+<li><a href="http://www.geeksforgeeks.org/dynamic-programming-set-24-optimal-binary-search-tree/">http://www.geeksforgeeks.org/dynamic-programming-set-24-optimal-binary-search-tree/</a></li>
+<li><a href="https://gist.github.com/mike168m/55fdb7e962fc521e56499b5c0b7dbe95">https://gist.github.com/mike168m/55fdb7e962fc521e56499b5c0b7dbe95</a></li>
+<li><a href="https://alg12.wikischolars.columbia.edu/file/view/OPTIMALBST.pdf">https://alg12.wikischolars.columbia.edu/file/view/OPTIMALBST.pdf</a></li>
+<li><a href="http://www.eli.sdsu.edu/courses/fall95/cs660/notes/OBST/OBST.html">http://www.eli.sdsu.edu/courses/fall95/cs660/notes/OBST/OBST.html</a></li>
+<li><a href="http://software.ucv.ro/~cmihaescu/ro/laboratoare/SDA/docs/arboriOptimali_en.pdf">http://software.ucv.ro/~cmihaescu/ro/laboratoare/SDA/docs/arboriOptimali_en.pdf</a></li>
+<li><a href="http://www.radford.edu/~nokie/classes/360/dp-opt-bst.html">http://www.radford.edu/~nokie/classes/360/dp-opt-bst.html</a></li>
+</ul></body>
+</html>
